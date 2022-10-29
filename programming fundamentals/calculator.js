@@ -3,7 +3,7 @@ function addnumbers(a,b){
 console.log(c)
 }
 function simplecalculator(a,b,o){
-    if(o =='+'){
+    if(o =='+' || o== 'plus' || ){
         let c = a + b 
         console.log(c);
 
@@ -23,7 +23,7 @@ function simplecalculator(a,b,o){
 
     }else{
         console.log("I Don't know what I am doing")
-        
+
     }
 }
 

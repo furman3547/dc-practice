@@ -11,6 +11,7 @@ function temperature(t){
     else if (t>100){
       console.log("very hot")
     }
+
 }
 temperature(60)
 //temperature(90)

@@ -3,3 +3,6 @@ var myname = "DigitalCrafts"
 let newname = myname;
 console.log(newname);
 console.log(age);
+
+
+

@@ -1,0 +1,10 @@
+let a=[0,10,40,32,55];
+let b=[2,6,3,80];
+let c=[]
+
+function mergeArray(){
+    for(i=0;i<a.length;i++)
+    c.push(a[i]);
+}
+    mergeArray(
+    )

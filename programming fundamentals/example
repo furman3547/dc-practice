@@ -1,0 +1,14 @@
+
+
+let a=[8,2,3,2,2,3]
+let b=[ ]//odd
+let c=[ ]//even
+for(i=0;i<a.length;i++){
+    if(a[i]%2==1) //a[i]is identifying what is in the array
+    b.push(a[i])
+    else {
+        c.push(a[i]) //puting something into the array 
+    }
+    }
+    console.log(b)
+    console.log(c)

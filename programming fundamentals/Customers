@@ -1,11 +1,11 @@
 let customerData = [ {
     customer:
     {
-        firstName: "Konrad",
-        lastName: "Pawlikowski",
+        firstName: "Alyssa",
+        lastName: "Furman"
         phone: "832-111-1111",
         email: "me@gmail.com",
-        address: "123 elm street",
+        address: "7777 seventh seven st",
         orderData:[
         {
             orderNum: 1,

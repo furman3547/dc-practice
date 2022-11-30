@@ -1,8 +1,33 @@
-.main container{
-    display: block
-    margin:0 auto
-    background-color: blue
-    
+#inputTask{
+    background-color:#EAF2D7;
+    font-family:"sofia",sans-serif;
+    font: size 35px;
+    border:none;
+    text-decoration-color: rgb(236, 107, 191);
 }
-    
-)
+.task-box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.incomplete{
+    background-color:bisque;
+    font-family:"sofia",sans-serif;
+    font: size 35px;
+    border:none;
+    text-decoration-color: rgb(236, 107, 191);
+
+}
+
+.complete{
+    background:#E4F0D0
+
+}
+/* 
+.remBtn {
+    background-color: white;
+    font-family:cursive;
+    border: none;
+    text-decoration-color: rgb(236, 107, 191); */
+/* } */

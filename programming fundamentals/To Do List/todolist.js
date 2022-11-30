@@ -13,7 +13,10 @@ function addTask(){
     checkbox.setAttribute("type","checkbox")
     const tempText=document.createElement("p")
     const remButton = document.createElement("button");
+    remButton.id="removeBtn";
+    remButton.className="removeBtn"
     remButton.innerText="Remove";
+
     tempText.innerText = textVal;
 
     tempDiv.append(checkbox); //add checkbox element into the temporary div 

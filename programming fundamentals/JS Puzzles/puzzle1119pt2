@@ -1,0 +1,14 @@
+// // Given array of number 1..n find the missing number in the array
+// // for example:
+// a = [1,2,4,6,7,8,9]
+// missing numbers [3,5]
+
+function missing(arr){
+    var x=0
+    for(var i=0;i<arr.length;i++)
+    x = x + 1;
+    if (arr[i]=x{
+        return(x)
+    })
+}
+missing(1,2,3,4,5,6,7,8,10)

@@ -1,0 +1,63 @@
+<!-- <input id="customer_name"type=text required minlength="10">
+<input type="tel" id="phone_number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+ -->
+
+<!-- html 5 type combinations 
+
+Create a HTML form to capture data entry to add a new book. The form should capture Book Name, ISBN, 
+author name, year published, rating, Media Type, Price 
+
+    Validations
+        All fields are are required
+        Book Name can contian maximum 50 characters
+        ISBN should contain 13 characters
+        Rating is a drop-down list with values All ages, 6+,13+ and shoudl default to all ages
+        Media Type is radio button with values: Kindle, Hardcover, CD 
+        Price should be positive number with maximum 2 decimals and should start with $  -->
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>Book Form</title>
+                <link rel="stylesheet" href="FormValidation.css">
+                <script>
+                    function validateForm(){
+                        const Book = document.getElementById('bookName').value;
+                        if (Book=='');
+                        alert('Please enter a book name')
+                        else if(book.value.length>5)  {
+                            alert('book name should be a minimum of 1 character')
+                        }           
+                      }
+                    
+                    
+                </script>
+            <body>
+        
+                    <form>
+                        Book Name: <input type= "text" required id="bookName" />
+                        <br>
+                        ISBN Number: <input type="number" required minlength="13"/>
+                        <br>
+                        Author (First,Last): <input type= "text" required/>
+                        <br>
+                        Year Published: <input type= "date" required/>
+                        <br>
+                        Rating:
+                        <br>
+                        Media Type: 
+
+  <input type="radio" id="type1" name="Kindle" value="30">
+  <label for="type1">Kindle</label><br>
+  <input type="radio" id="type2" name="Hardcover" value="60">
+  <label for="type2">Hardcover</label><br>  
+  <input type="radio" id="type3" name="CD" value="100">
+  <label for="Type 3">CD</label><br><br>
+
+                        Price: <input type="text" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" required/>
+<br>
+<input type="submit" value="Submit">
+                    </form>
+
+                            </body>
+                            </head>

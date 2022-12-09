@@ -1,0 +1,64 @@
+<html>
+    <style>
+.parentContainer {
+  display: flex;
+  flex-direction: row; 
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.catListContainer {
+    display: flex;
+    flex-direction: column;
+  border: 5px outset red;
+  background-color: lightblue;
+  width: 800 px;
+  height: 600 px;
+  text-align: center;
+}
+
+.catImageContainer {
+    display: flex;
+    flex-direction: column;
+  border: 5px outset green;
+  width: 200px;
+  height: 500 px;
+  background-color: lightblue;
+  text-align: center;
+}
+    </style>
+    
+        <script>
+            function callApi(){
+                let apiRequest = new XMLHttpRequest(); //OLD WAY OF calling the API within the code use the object XMLHttpRequest
+                apiRequest.onreadystatechange = function(){
+                    if(apiRequest.readyState ==4){
+                        // console.log(apiRequest.responseText);
+                        document.getElementById("apiResponseArea")
+                    }
+                } 
+                apiRequest.open("GET","https://api.thecatapi.com/v1/breeds");
+                apiRequest.send (); //makes the call to the api... the ".send" makes the request final
+
+            }
+
+
+        </script>
+   
+    <body>
+        <div id="parentContainer">
+            <div id="catListContainer"></div>
+
+
+            <div id="catImageContainer"></div>
+
+
+
+        </div>
+
+
+        
+        <button>callAPI </button>
+    </body>
+</html>

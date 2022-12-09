@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            //one method of integrating an API  
+            function callApi(){
+                let apiRequest = new XMLHttpRequest(); //OLD WAY OF calling the API within the code use the object XMLHttpRequest
+                apiRequest.onreadystatechange = function(){
+                    if(apiRequest.readyState ==4){
+                        console.log(apiRequest.responseText);
+                        document.getElementById("apiResponseArea")
+                    }
+                } 
+                apiRequest.open("GET","https://api.thecatapi.com/v1/breeds");
+                apiRequest.send (); //makes the call to the api... the ".send" makes the request final
+
+            }
+        </script>
+    </head>
+<body>
+    <button onclick="callApi()">Call API</button>
+<div id="apiResponseArea"></div>
+</body>
+</html>

@@ -20,24 +20,13 @@ author name, year published, rating, Media Type, Price
             <head>
                 <title>Book Form</title>
                 <link rel="stylesheet" href="FormValidation.css">
-                <script>
-                    function validateForm(){
-                        const Book = document.getElementById('bookName').value;
-                        if (Book=='');
-                        alert('Please enter a book name')
-                        else if(book.value.length>5)  {
-                            alert('book name should be a minimum of 1 character')
-                        }           
-                      }
-                    
-                    
-                </script>
+            </head>
             <body>
         
                     <form>
-                        Book Name: <input type= "text" required id="bookName" />
+                        Book Name: <input type= "text"id="bookName"required  />
                         <br>
-                        ISBN Number: <input type="number" required minlength="13"/>
+                        ISBN Number: <input type="number" id="ISBN" required minlength="13"/>
                         <br>
                         Author (First,Last): <input type= "text" required/>
                         <br>
@@ -45,19 +34,59 @@ author name, year published, rating, Media Type, Price
                         <br>
                         Rating:
                         <br>
-                        Media Type: 
+                        <input type="radio" id="type1" name="5stars" value="30">
+  <label for="type1">5 stars</label><br>
+  <input type="radio" id="type2" name="Hardcover" value="60">
+  <label for="type2">4 stars</label><br>  
+  <input type="radio" id="type3" name="CD" value="100">
+  <label for="type2">3 stars</label><br> 
+  <input type="radio" id="type3" name="CD" value="100">
+  <label for="type2">2 stars</label><br> 
+  <input type="radio" id="type3" name="CD" value="100">
+  <label for="type2">1 star</label><br> 
 
+                        <br>
+                        Media Type: 
+                        <br>
   <input type="radio" id="type1" name="Kindle" value="30">
-  <label for="type1">Kindle</label><br>
+  <label for="type1">audiobook</label><br>
   <input type="radio" id="type2" name="Hardcover" value="60">
   <label for="type2">Hardcover</label><br>  
   <input type="radio" id="type3" name="CD" value="100">
-  <label for="Type 3">CD</label><br><br>
+  <label for="Type 3">paperback</label><br><br>
 
-                        Price: <input type="text" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" required/>
+Price: <input type="text" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" required/>
 <br>
-<input type="submit" value="Submit">
+<button type="submit" id="submit">submit</button>
                     </form>
 
-                            </body>
-                            </head>
+
+                    <script>
+                        const Book = document.getElementById('bookName');
+                        const ISBN = document.getElementById('ISBN');
+                        const submitButton= document.getElementById('submit');
+                
+                
+                        submitButton.addEventListener('click',()=>{
+                        
+                if(Book.value == ''){
+                        Book.setCustomValidity('Please enter a book name');
+                    }else if(Book.value.length<10){
+                        Book.setCustomValidity('Book name is minimum 2 characters');
+                    }else if (Book.value!=''){
+                        Book.setCustomValidity('');
+                    }
+                    
+                    if(ISBN.value == ''){
+                        ISBN.setCustomValidity('Please enter an ISBN number (13 numerical characters)');
+                    }else if(ISBN.value.length<13){
+                        ISBN.setCustomValidity('ISBN Number is minimum 13 numerical characters');
+                    }else if (ISBN.value!=''){
+                        ISBN.setCustomValidity('');
+                    }
+                })
+                </script>            
+    </body>
+    </html>
+    
+                            

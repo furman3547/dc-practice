@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <title>Weather app</title>
+
+    </head>
+    <body>
+
+<div>
+<label for="Latitude">Latitude:</label>
+<input type="text" id="Lat">
+<br><br>
+<label for="Latitude">Longitude:</label>
+<input type="text" id="Lon"> <br><br>
+<button id="callAPI">call API</button>
+</div>
+
+<script>
+const callAPIbtn =document.getElementById("callAPI"); 
+
+callAPIbtn.addEventListener("click", ()=>{ //calling the function to access API 
+    const latitude=document.getElementById("Lat").value;
+    const longitude=document.getElementById("Lon").value;
+    callAPI(latitude,longitude)//variables from 23,24 
+
+})
+function callAPI(lat,lon){
+    fetch("https://api.weather.gov/points/"+lat+","+lon)
+    .then((r)=>r.json())
+    .then((apiResponse)=>{
+        showData(apiResponse)})//passing json object through callAPI function
+}
+
+
+function showData(output){
+    const forecast = output.properties.forecast //pathway from API variable forcast
+    console.log(forecast)
+
+
+}
+
+</script>
+
+
+    </body>
+</html>
